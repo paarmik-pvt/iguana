@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Copyright and usage policies for Iguana.">
+    <link rel="icon" type="image/x-icon" href="Images/SPACIFII.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Legal | Iguana</title>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    
+        html {
+            scroll-behavior: smooth;
+        }
+    
+        body {
+            font-family: 'Inter', sans-serif; /* Switched to Inter, OpenAI's font */
+            background-color: #000000;
+            color: #ffffff;
+            overflow-x: hidden;
+            line-height: 1.6;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+    
+        body.light-mode {
+            background-color: #f5f5f5; /* Softer white like OpenAI */
+            color: #1a1a1a; /* Darker gray for readability */
+        }
+
+        header {
+            padding: 20px 40px; /* More padding for a cleaner look */
+            background-color: #000000;
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: background-color 0.3s ease, border-bottom 0.3s ease;
+        }
+
+        body.light-mode header {
+            background-color: #ffffff;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+    
+        header h1 {
+            font-size: 2.5em; /* Larger for emphasis */
+            font-weight: 600; /* Medium weight like OpenAI */
+            color: #ffffff;
+            margin-bottom: 5px;
+            text-align: center;
+            letter-spacing: 0.5px; /* Subtle spacing */
+            transition: color 0.3s ease;
+        }
+
+        body.light-mode header h1 {
+            color: #1a1a1a;
+        }
+    
+        header p {
+            color: #bbbbbb;
+            font-size: 1em;
+            font-weight: 400;
+            transition: color 0.3s ease;
+        }
+
+        body.light-mode header p {
+            color: #666666; /* Softer gray */
+        }
+    
+        main {
+            max-width: 900px; /* Narrower like OpenAI for readability */
+            margin: 40px auto; /* More margin for breathing room */
+            padding: 0 20px;
+            text-align: left; /* Left-aligned text like OpenAI */
+        }
+    
+        p {
+            font-size: 1em; /* Slightly smaller for clarity */
+            max-width: 100%;
+            margin: 20px 0;
+            color: #ffffff;
+            transition: color 0.3s ease;
+        }
+
+        body.light-mode p {
+            color: #1a1a1a;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            font-weight: 600;
+            color: #ffffff;
+            margin: 30px 0 15px;
+            transition: color 0.3s ease;
+        }
+
+        body.light-mode h2 {
+            color: #1a1a1a;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin: 30px 0;
+            transition: border-top 0.3s ease;
+        }
+
+        body.light-mode hr {
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 40px; /* More indent for clarity */
+            color: #ffffff;
+            transition: color 0.3s ease;
+        }
+
+        body.light-mode ul {
+            color: #1a1a1a;
+        }
+
+        ul li {
+            margin: 10px 0;
+        }
+    
+        footer {
+            padding: 20px 40px;
+            background-color: #000000;
+            color: #bbbbbb; /* Lighter gray for elegance */
+            font-size: 0.9em;
+            font-weight: 400;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative; /* Changed to relative for content flow */
+            width: 100%;
+            max-width: 1200px; /* Matches main width */
+            margin: 40px auto 0; /* Centered with top margin */
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            transition: background-color 0.3s ease, color 0.3s ease, border-top 0.3s ease;
+        }
+
+        body.light-mode footer {
+            background-color: #f5f5f5;
+            color: #666666;
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+        }
+    
+        footer a {
+            color: #bbbbbb;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        body.light-mode footer a {
+            color: #666666;
+        }
+    
+        footer a:hover {
+            color: #ffffff;
+        }
+
+        body.light-mode footer a:hover {
+            color: #1a1a1a;
+        }
+    
+        footer img {
+            width: 20px; /* Slightly smaller for subtlety */
+            height: 20px;
+            vertical-align: middle;
+            margin-left: 10px;
+        }
+    
+        .sidebar {
+            transition: width 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+            height: 100%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #000000;
+            overflow-x: hidden;
+            padding-top: 60px;
+            z-index: 100;
+            border-right: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: background-color 0.3s ease, border-right 0.3s ease;
+        }
+
+        body.light-mode .sidebar {
+            background-color: #f0f0f0;
+            border-right: 1px solid rgba(0, 0, 0, 0.1);
+        }
+    
+        .sidebar a {
+            padding: 16px 32px;
+            text-decoration: none;
+            font-size: 1.1em; /* Slightly smaller for elegance */
+            color: #bbbbbb;
+            display: block;
+            position: relative; /* Added for underline effect */
+            transition: color 0.3s ease;
+        }
+
+        body.light-mode .sidebar a {
+            color: #666666;
+        }
+    
+        .sidebar a:hover {
+            color: #ffffff;
+        }
+
+        body.light-mode .sidebar a:hover {
+            color: #1a1a1a;
+        }
+
+        /* Re-added underline effect */
+        .sidebar a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 10px; /* Adjusted for better alignment */
+            left: 32px; /* Matches padding-left */
+            background: #ffffff;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            transition: width 0.3s ease;
+        }
+
+        body.light-mode .sidebar a::after {
+            background: #1a1a1a;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        
+        .sidebar a:hover::after {
+            width: calc(100% - 64px); /* Adjusted for padding on both sides */
+        }
+    
+        .sidebar .close-btn {
+            position: absolute;
+            top: 15px; /* Adjusted for better spacing */
+            right: 25px;
+            font-size: 28px; /* Slightly smaller */
+            color: white;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        body.light-mode .sidebar .close-btn {
+            color: #1a1a1a;
+        }
+    
+        .open-sidebar-btn {
+            font-size: 1.2em;
+            color: #ffffff;
+            cursor: pointer;
+            background-color: transparent;
+            border: none;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 105;
+            transition: 0.3s ease;
+            padding: 5px;
+            border-radius: 9px;
+        }
+    
+        body.light-mode .open-sidebar-btn {
+            color: #1a1a1a;
+        }
+    
+        .open-sidebar-btn.hidden {
+            display: none;
+        }
+    
+        body.light-mode .open-sidebar-btn:hover {
+            background-color: #1a1a1a;
+            color: #ffffff;
+        }
+    
+        .open-sidebar-btn:hover {
+            opacity: 0.8;
+        }
+        
+        .sidebar.open {
+            width: 250px;
+        }
+    
+        .sidebar .links-container {
+            display: flex;
+            flex-direction: column;
+            padding: 10px 20px;
+            margin-top: 20px;
+        }
+
+        .theme-toggle-btn {
+            position: relative;
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50%; /* Fully circular like OpenAI buttons */
+            padding: 5px;
+            width: 36px; /* Slightly smaller */
+            height: 36px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        body.light-mode .theme-toggle-btn {
+            border-color: rgba(0, 0, 0, 0.2);
+        }
+        
+        .theme-toggle-btn::before {
+            content: '☾';
+            font-size: 16px;
+            color: #ffffff;
+            transition: all 0.3s ease;
+        }
+        
+        body.light-mode .theme-toggle-btn::before {
+            content: '☀';
+            color: #1a1a1a;
+        }
+        
+        .theme-toggle-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+        
+        body.light-mode .theme-toggle-btn:hover {
+            background: rgba(0, 0, 0, 0.05);
+            border-color: rgba(0, 0, 0, 0.3);
+        }
+        
+        .theme-toggle-btn span {
+            display: none;
+        }
+        
+        .theme-toggle-container {
+            padding: 20px; /* More padding for balance */
+            display: flex;
+            justify-content: center;
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 200px;
+            }
+            .open-sidebar-btn {
+                font-size: 1em;
+            }
+            header {
+                padding: 15px 20px;
+            }
+            main {
+                margin: 20px auto;
+                padding: 0 15px;
+            }
+            footer {
+                padding: 15px 20px;
+                flex-direction: column;
+                gap: 10px;
+                margin: 20px auto 0;
+            }
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            font-size: 20px;
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        body.light-mode .back-to-top {
+            background: rgba(0, 0, 0, 0.1);
+            color: #1a1a1a;
+        }
+        .back-to-top.visible {
+            opacity: 1;
+        }
+
+        .large-text {
+            font-size: 2.5em; /* Slightly smaller for balance */
+            font-weight: 600;
+            color: #ffffff;
+            margin: 40px 0 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease, color 0.3s ease;
+        }
+
+        body.light-mode .large-text {
+            color: #1a1a1a;
+        }
+    
+        .large-text.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    
+        ::selection {
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        .open-sidebar-btn, footer a, main a {
+            transition: transform 0.2s ease, color 0.3s ease;
+        }
+        .open-sidebar-btn:hover, footer a:hover, main a:hover {
+            transform: scale(1.05);
+        }
+
+        body.light-mode ::selection {
+            background-color: #1a1a1a;
+            color: #ffffff;
+        }
+
+        .last-updated {
+            font-size: 0.9em;
+            color: #bbbbbb;
+            margin-top: 40px;
+            transition: color 0.3s ease;
+        }
+
+        body.light-mode .last-updated {
+            color: #666666;
+        }
+    </style>
+</head>
+<body>
+    <button class="open-sidebar-btn" onclick="openSidebar()">☰</button>
+
+    <!-- Sidebar -->
+    <div id="mySidebar" class="sidebar">
+        <span class="close-btn" onclick="closeSidebar()">×</span>
+        <div class="links-container">
+            <a href="../index.html">Home</a>
+        </div>
+        <div class="theme-toggle-container">
+            <button class="theme-toggle-btn" onclick="toggleTheme()"><span>Toggle Theme</span></button>
+        </div>
+    </div>
+
+    <header>
+        <span style="user-select: none;"><br></span>
+        <h1><b>Copyright and Usage</b></h1>
+        <p>[ Legal ]</p>
+    </header>
+
+    <main>
+        <p>© 2025 Iguana. All rights reserved.</p>
+        <p>All content on this website, or any other Iguana platforms part of the Iguana Network, including text, graphics, logos, and images, is the property of Iguana and is protected by copyright laws.</p>
+        <hr>
+        <h2>Ownership of Images</h2>
+        <p>All images on this site are the property of Iguana. These images were generated using AI tools provided by OpenAI's ChatGPT platform, and all rights are reserved.</p>
+        <hr>
+        <h2>Usage Restrictions</h2>
+        <p>You are prohibited from:</p>
+        <ul>
+            <li>Reproducing, distributing, or modifying any content without prior written permission from Iguana.</li>
+            <li>Reproducing, distributing, or modifying any of the images found on this website.</li>
+            <li>Using any content for commercial purposes without explicit consent.</li>
+            <li>Reposting or redistributing any images from this site without explicit permission.</li>
+        </ul>
+        <hr>
+        <h2>No Right to Use for Commercial Purposes</h2>
+        <p>Unless otherwise stated, images are intended for personal use only and cannot be used in commercial projects or on other websites without written permission.</p>
+        <hr>
+        <h2>Legal Action</h2>
+        <p>Any unauthorized use of these images or any other content found on this website or which are under copyright of Iguana may result in legal action. All rights are protected by copyright laws.</p>
+        <hr>
+        <h2>Contact Us</h2>
+        <p>For any inquiries regarding the use of images or any other content, please contact us <a href="mailto:official.iguana11@gmail.com" style="color: #bbbbbb; text-decoration: underline; transition: color 0.3s ease;">here</a>.</p>
+        <p class="last-updated">Last Updated: April 03, 2025</p>
+    </main>
+
+    <footer>
+        <span>© 2025 Iguana. All Rights Reserved.</span>
+        <a href="official.iguana11@gmail.com">Email Us</a>
+        <a href="https://t.me/iguanahq" target="_blank">
+            Telegram Chat <img src="../Images/Black Telegram Logo.webp" alt="Telegram Logo">
+        </a>
+    </footer>
+
+    <button class="back-to-top" onclick="scrollToTop()">↑</button>
+
+    <script>
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        window.addEventListener('scroll', () => {
+            const btn = document.querySelector('.back-to-top');
+            if (window.scrollY > 300) btn.classList.add('visible');
+            else btn.classList.remove('visible');
+        });
+        // Theme toggle functionality
+        function toggleTheme() {
+            document.body.classList.toggle('light-mode');
+            
+            // Save the user's preference
+            if (document.body.classList.contains('light-mode')) {
+                localStorage.setItem('theme', 'light');
+            } else {
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        // Check for saved theme preference on load
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'light') {
+                document.body.classList.add('light-mode');
+            }
+            // Update link and last-updated colors for light mode
+            const links = document.querySelectorAll('main a');
+            links.forEach(link => {
+                link.style.color = savedTheme === 'light' ? '#666666' : '#bbbbbb';
+            });
+        });
+
+        // Sidebar functions
+        function openSidebar() {
+            document.getElementById("mySidebar").classList.add("open");
+            document.querySelector(".open-sidebar-btn").classList.add("hidden");
+        }
+    
+        function closeSidebar() {
+            document.getElementById("mySidebar").classList.remove("open");
+            document.querySelector(".open-sidebar-btn").classList.remove("hidden");
+        }
+    
+        // Google Login logic
+        let googleClient;
+    
+        function initializeGoogleLogin() {
+            googleClient = google.accounts.oauth2.initTokenClient({
+                client_id: "483257125563-nmqcb65pst9dsjgcukppp0a522rkt165.apps.googleusercontent.com",
+                scope: "profile email",
+                callback: (response) => {
+                    if (response.access_token) {
+                        fetch("https://www.googleapis.com/oauth2/v3/userinfo", {
+                            headers: { Authorization: `Bearer ${response.access_token}` }
+                        })
+                        .then(res => res.json())
+                        .then(data => {
+                            console.log("Name:", data.name);
+                            console.log("Email:", data.email);
+                            alert(`Welcome, ${data.name}! You’re logged in.`);
+                            closeSidebar();
+                        })
+                        .catch(err => console.error("Error fetching user info:", err));
+                    } else {
+                        console.error("Login failed:", response);
+                    }
+                },
+            });
+        }
+    
+        function triggerGoogleLogin() {
+            if (!googleClient) {
+                initializeGoogleLogin();
+            }
+            googleClient.requestAccessToken();
+        }
+    
+        // Scroll animation
+        const animatedElements = document.querySelectorAll(".large-text");
+    
+        function checkScroll() {
+            animatedElements.forEach((element) => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+                if (elementPosition < screenPosition && elementPosition > -element.offsetHeight) {
+                    element.classList.add("visible");
+                } else {
+                    element.classList.remove("visible");
+                }
+            });
+        }
+    
+        // Event listeners
+        window.addEventListener("scroll", checkScroll);
+        window.onload = function() {
+            initializeGoogleLogin();
+            checkScroll();
+        };
+    </script>
+</body>
+</html>

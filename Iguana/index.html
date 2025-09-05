@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Iguana Official Website" />
+    <meta name="author" content="Iguana">
+    <meta property="og:title" content="Iguana HQ - Join the Dev Revolution">
+    <meta property="og:description" content="We’re building a code empire. You in?">
+    <meta name="keywords" content="iguana, iguanas, Iguana Official, Iguana HQ, coding iguana, developer iguana, Iguana site, Iguana Vercel, Iguana tech">
+
+    <link rel="icon" type="image/x-icon" href="Images/SPACIFII.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+    <title>Iguana Official Website</title>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+
+    <style>
+        :root {
+            --button-color: #ffffff;
+            --button-txt-color: #ffffff;
+            --brand: #16dd00;
+            --black: #000000;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--black);
+            color: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        header {
+            text-align: center;
+            padding: 80px 20px 40px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        header p {
+            color: #999;
+            font-size: 1em;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        .hero-stack {
+            margin: 0 auto;
+            max-width: 900px;
+        }
+
+        .hero-stack h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 4rem;
+            margin: 0.4em 0;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+            animation: typing 1.5s steps(20, end) forwards, blink-cursor 0.6s step-end infinite;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 3px solid var(--white);
+        }
+
+        .hero-stack h1:nth-child(2) {
+            color: var(--brand);
+        }
+
+        .hero-stack h2 {
+            font-size: 1.5rem;
+            margin-top: 30px;
+            font-weight: bold;
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        @keyframes blink-cursor {
+            from, to { border-color: transparent }
+            50% { border-color: var(--white) }
+        }
+
+        .xtra-large-text {
+            font-size: 7em;
+            font-weight: bold;
+            color: #ffffff;
+            margin: 30px 0;
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+        }
+
+        button {
+            background: transparent;
+            border: 2px solid var(--button-color);
+            padding: 15px 30px;
+            font-size: 1.1em;
+            font-weight: bold;
+            border-radius: 10px;
+            color: var(--button-txt-color);
+            margin-top: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background: var(--button-color);
+            color: var(--black);
+        }
+
+
+.cta-button {
+  position: relative;
+  background: linear-gradient(145deg, #000000, rgb(0, 0, 0));
+  color: #ffffff;
+  box-shadow: 0 0 0 2px white;
+  font-size: 1.1em;
+  font-weight: 700;
+  border: none;
+  border-radius: 12px;
+  padding: 15px 35px;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 1;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.cta-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.5) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-20deg);
+  z-index: 2;
+  animation: shine 2s infinite ease-in-out;
+}
+
+@keyframes shine {
+  0% {
+    left: -75%;
+  }
+  100% {
+    left: 125%;
+  }
+}
+
+.cta-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #16dd00, 0 0 40px #16dd00a0;
+}
+
+
+
+        .open-sidebar-btn {
+    position: fixed;
+    top: 35px;
+    left: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(6px);
+    color: var(--white);
+    font-size: 1.2rem;
+    padding: 6px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    z-index: 100;
+    transition: all 0.3s ease;
+}
+
+.open-sidebar-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: scale(1.05);
+}
+
+
+        .sidebar {
+    transition: width 0.4s ease, transform 0.4s ease;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #0a0a0a;
+    overflow-x: hidden;
+    padding-top: 60px;
+    z-index: 100;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    transform: translateX(-100%);
+    will-change: transform, width;
+}
+
+.sidebar.open {
+    width: 250px;
+    transform: translateX(0);
+}
+
+.sidebar .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.sidebar .links-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 40px;
+    padding-left: 20px;
+}
+
+.sidebar .links-container a {
+    display: block;
+    padding: 14px 0;
+    font-size: 1.15rem;
+    color: #bbbbbb;
+    text-decoration: none;
+    position: relative;
+    width: 100%;
+    transition: color 0.3s ease;
+}
+
+.sidebar .links-container a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 8px;
+    width: 0%;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.3s ease;
+}
+
+.sidebar .links-container a:hover {
+    color: #26ff00;
+}
+
+.sidebar .links-container a:hover::after {
+    width: 100%;
+}
+
+
+        main {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 12px;
+            margin-top: 40px;
+            transition: transform 0.4s ease;
+        }
+
+        img:hover {
+            transform: scale(1.03);
+        }
+
+        ::selection {
+            background: var(--white);
+            color: var(--black);
+        }
+
+        @media (max-width: 768px) {
+    .hero-stack h1 {
+        font-size: 2.2rem;
+        opacity: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 3px solid white;
+        width: 0;
+    }
+
+    .hero-stack h2 {
+        font-size: 1.1rem;
+        opacity: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 3px solid white;
+        width: 0;
+    }
+
+    .sidebar {
+        width: 200px;
+    }
+
+    .sidebar.open {
+        width: 200px;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+}
+
+    @keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-cursor {
+    from, to { border-color: transparent; }
+    50% { border-color: white; }
+}
+
+    .big-title {
+    color: #ffffff;
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+footer {
+            padding: 20px 40px;
+            background-color: #000000;
+            color: #bbbbbb;
+            font-size: 0.9em;
+            font-weight: 400;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            width: 100%;
+            max-width: 1200px;
+            margin: 40px auto 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            transition: background-color 0.3s ease, color 0.3s ease, border-top 0.3s ease;
+
+}
+
+footer a {
+            color: #636363;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a {
+            display: inline-block;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        footer a:hover {
+            transform: scale(1.05);
+            color: #aeadad;
+        }
+
+    
+        footer img {
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
+            margin-left: 10px;
+        }
+    
+        #footer-particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+   
+
+    </style>
+</head>
+
+<script>
+    window.onload = () => {
+        const titles = document.querySelectorAll('.hero-stack');
+
+        titles.forEach((el, i) => {
+            setTimeout(() => {
+                el.style.opacity = 1;
+                el.style.animation = "typing 1.2s steps(30, end) forwards, blink-cursor 0.6s step-end infinite";
+            }, 1000 + i * 1300); // delay each by 1.3s after initial 1s load
+        });
+    };
+
+    
+</script>
+
+
+<body>
+    <button class="open-sidebar-btn" onclick="openSidebar()">≣</button>
+
+
+    <div id="mySidebar" class="sidebar">
+        <span class="close-btn" onclick="closeSidebar()">×</span>
+        <div class="links-container">
+            <a href="index.html">Home</a>
+            <a href="https://www.youtube.com/@iguanacodes" target="_blank">YoutTube</a>
+            <a href="https://t.me/iguanacodes" target="_blank">Telegram</a>
+            <a href="https://discord.gg/3Bwsc9jKRf" target="_blank">Discord</a>
+            <a href="https://t.me/iguanahq" target="_blank">Telegram Group Chat</a>
+            <a href="https://github.com/iguanacodes" target="_blank">GitHub</a>
+            <a href="Pages/Legal.html">Legal Info</a>
+            <!--<a href="#" id="loginLink" onclick="triggerGoogleLogin()">Login</a>-->
+        </div>
+    </div>
+
+    <header>
+        <p style="
+  color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: 700;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  margin: 0;
+  z-index: 200;
+  font-family: 'Space Grotesk', sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+">Iguana</p>
+        
+        
+        <p>[ The Revolution Will Be Programmed ]</p>
+        <div class="hero-stack">
+            <h1>We're Building The Next</h1>
+            <h1>Code Empire.</h1>
+            <h1>You in?</h1>
+            <a href="#section1">
+            <span style="user-select: none;"><br><br><br></span>
+                <button class="cta-button" onclick="window.open('https://www.youtube.com/@iguanacodes', '_blank')">
+  Unlock Your New Obsession
+</button>
+
+
+            </a>
+        </div>
+          
+        <span style="user-select: none;"><br><br><br><br><br></span>
+
+        
+
+    </header>
+
+    <span style="user-select: none;"><br><br><br><br><br></span>
+
+    <main>
+
+        <h2 style="font-size: 2.2rem; margin-bottom: 30px; text-transform: uppercase; letter-spacing: 1px; color: #ffffff;">
+            Why Iguana?
+        </h2>
+
+        <span style="user-select: none;"><br></span>
+
+        <section style="background: #111; padding: 15px 20px; margin: 20px auto; max-width: 900px; border-radius: 12px; font-weight: 600; color: #16dd00; display: flex; justify-content: space-around; font-family: 'Space Grotesk', sans-serif;">
+            <div>🔥 Code Like a Hacker, Not a Slacker</div>
+            <div>🚀 Ctrl + C Human, Ctrl + V AI Genius</div>
+            <div>💀 Live Site Roasts (No Mercy Edition)</div>
+            <div>🧠 One Tip = 10x Smarter Dev Brain</div>
+        </section>
+
+        <span style="user-select: none;"><br><br><br><br><br><br></span>
+
+        <hr>
+
+        <span style="user-select: none;"><br><br><br><br><br><br></span>
+
+
+        <section style="
+
+  color: #fff;
+  padding: 30px;
+  text-align: center;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+  font-size: 1.4rem;
+
+">
+        <div>MISSIONS:</div>
+
+</section>
+
+        <section style="background: #111; padding: 10px 30px; max-width: 900px; margin: 0 auto; border-radius: 12px; font-family: 'Space Grotesk', sans-serif; color: #16dd00; display: flex; justify-content: space-between; font-weight: 600;">
+  <div style="color: #ffffff;">🟢 Systems Online</div>
+  <div>🔥 5 BIG Projects to Build Before GTA6!</div>
+  <div>🌍 The whole planet in the Squad 💪🏼</div>
+</section>
+
+        <span style="user-select: none;"><br><br><br><br><br><br></span>
+
+        <section style="
+  background: #111;
+  color: #fff;
+  padding: 30px;
+  margin: 60px auto 0;
+  border-radius: 12px;
+  text-align: center;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+  font-size: 1.4rem;
+  box-shadow: 0 0 20px #16dd0050;
+  max-width: 900px;
+">
+  <div>🚧 This isn’t just another dev hub.</div>
+  <div>It's the underground lair where the next generation of legends load in. Imagine accidently writing the code of the next groundbreaking tech...</div>
+</section>
+
+        <span style="user-select: none;"><br><br><br><br><br><br></span>
+
+
+
+        <span style="user-select: none;"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></span>
+        <b class="xtra-large-text" style="color:rgb(104, 209, 129);">i</b><b class="xtra-large-text">guana</b>
+
+    </main>
+
+
+    <footer id="section3">
+        <canvas id="footer-particles"></canvas>
+        <span>© 2025 Iguana. All Rights Reserved.</span>
+        <span>Built With 💚 By The Iguana</span>
+        <a href="mailto:official.iguana11@gmail.com">Email Iguana</a>
+        <a href="https://discord.gg/MSJNQePp" target="_blank"> HQ <img src="../Images/Discord Logo.webp" alt="Discord Logo"></a>
+    </footer>
+
+    <script>
+  function openSidebar() {
+    const sidebar = document.getElementById("mySidebar");
+    sidebar.classList.add("open");
+  }
+
+  function closeSidebar() {
+    const sidebar = document.getElementById("mySidebar");
+    sidebar.classList.remove("open");
+  }
+
+  // Prevent auto-closing when clicking inside the sidebar or toggle
+  document.addEventListener("click", function(event) {
+    const sidebar = document.getElementById("mySidebar");
+    const toggleBtn = document.querySelector(".open-sidebar-btn");
+    
+    const clickedInsideSidebar = sidebar.contains(event.target);
+    const clickedToggle = toggleBtn.contains(event.target);
+
+    if (!clickedInsideSidebar && !clickedToggle) {
+      closeSidebar();
+    }
+  });
+
+  // Prevent clicks inside from bubbling up
+  document.getElementById("mySidebar").addEventListener("click", function(event) {
+    event.stopPropagation();
+  });
+</script>
+
+
+
+
+    </body>
+    </html>
+
+    
